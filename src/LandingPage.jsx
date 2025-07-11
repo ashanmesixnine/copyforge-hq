@@ -19,7 +19,35 @@ export default function LandingPage() {
             Buy Now with Stripe
           </button>
         </a>
-      </div>
+      </div>    import React, { useEffect } from "react";
+
+function LandingPage() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://js.stripe.com/v3/buy-button.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
+  return (
+    <div className="landing-page">
+      <h1>Welcome to CopyForge</h1>
+      <p>Buy 20 Custom GPT Product Prompts</p>
+
+      <stripe-buy-button
+        buy-button-id="buy_btn_1RjjwLDmpFCoXg9hlgAGT3ZC"
+        publishable-key="pk_live_51RjJSmDmpFCoXg9hFkvNLDaqLKKtbDjZMcJ2tpzkMYnRcGanzdsNJYJgNkth8o4mQSTACwD3dn0En3tkV1EGEp8m00MvlVvUA5">
+      </stripe-buy-button>
+    </div>
+  );
+}
+
+export default LandingPage;
+
+
+Add the Stripe code inside that <div> block:
+
+
       <p style={{ fontSize: "0.9rem", color: "#888" }}>
         Questions or bulk orders? Email <strong>copyforge@proton.me</strong>
       </p>
