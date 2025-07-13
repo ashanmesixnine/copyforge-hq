@@ -1,43 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function LandingPage() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://js.stripe.com/v3/buy-button.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
-    <div style={{ 
-      textAlign: "center", 
-      padding: "50px", 
-      fontFamily: "Arial, sans-serif" 
-    }}>
-      <h1 style={{ fontSize: "2.5rem", marginBottom: "20px" }}>
-        Welcome to CopyForge
-      </h1>
-
-      <p style={{ fontSize: "1.2rem", marginBottom: "40px", maxWidth: "600px", margin: "0 auto" }}>
-        AI-powered copywriting, product descriptions, taglines, bios, and content on-demand. 
-        One-click service – perfect for creators, resellers, and hustlers who need fire words fast.
+    <div style={{ fontFamily: "Arial", textAlign: "center", padding: "2rem" }}>
+      <h1 style={{ fontSize: "2.5rem" }}>CopyForge AI</h1>
+      <p style={{ fontSize: "1.2rem", color: "#555" }}>
+        High-converting product copy written with AI speed and human punch. Perfect for Etsy, Amazon, and Shopify.
       </p>
-
-      <a
-        href="https://buy.stripe.com/fZucN55n77zy2UJ7e02B202"
-        target="_blank"
-        rel="noopener noreferrer"
+      <div
         style={{
-          display: "inline-block",
-          padding: "14px 32px",
-          backgroundColor: "#6772e5",
-          color: "#fff",
-          fontWeight: "600",
-          fontSize: "18px",
+          border: "1px solid #ccc",
           borderRadius: "8px",
-          textDecoration: "none",
-          marginTop: "40px"
+          padding: "2rem",
+          maxWidth: "500px",
+          margin: "2rem auto",
         }}
       >
-        Pay Now – $20
-      </a>
+        <h2>$15 Product Description Package</h2>
+        <ul style={{ textAlign: "left", margin: "1rem 0" }}>
+          <li>✅ AI-crafted, human-edited copy</li>
+          <li>✅ SEO-friendly title, bullets, CTA</li>
+          <li>✅ Delivered in 24–48 hours</li>
+        </ul>
 
-      <p style={{ fontSize: "0.9rem", color: "#666", marginTop: "20px" }}>
-        Instant access after payment. Questions? Hit us up.
-      </p>
+        {/* Stripe Buy Button */}
+        <stripe-buy-button
+          buy-button-id="plink_1rKTZEDmpFCxO9h9le2eHf0"
+          publishable-key="pk_live_51RiJ5JbEh..."
+        ></stripe-buy-button>
+      </div>
     </div>
   );
 }
