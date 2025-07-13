@@ -36,8 +36,6 @@ export default function LandingPage() {
 <stripe-buy-button
   buy-button-id="buy_btn_1RkW0VDmpFCoXg9hDCe74JGW"
   publishable-key="pk_live_51RjJSmDmpFCoXg9hFkvNLDaqLKKtbDjZMcJ2tpzkMYnRcGanzdsNJYJgNkth8o4mQSTACwD3dn0En3tkV1EGEp8m00MvlVvUA5"
->
-</stripe-buy-button>
 
        
         ></stripe-buy-button>
