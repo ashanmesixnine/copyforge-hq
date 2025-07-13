@@ -29,11 +29,14 @@ export default function LandingPage() {
           <li>✅ SEO-friendly title, bullets, CTA</li>
           <li>✅ Delivered in 24–48 hours</li>
         </ul>  
-<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+      <script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
 
 <stripe-buy-button
   buy-button-id="buy_btn_1RkW0VDmpFCoXg9hDCe74JGW"
-  publishable-key="pk_live_51RjJSmDmpFCoXg9hFkvNLDaqLKKtbDjZMcJ2tpzkMYnRcGanzdsNJYJgNkth8o4mQSTACwD3dn0En3tkVlEGEp8m00MvLVvUJA5"
+  publishable-key="pk_live_51RjJSmDmpFCoXg9hFkvNLDaqLKKtbDjZMcJ2tpzkMYnRcGanzdsNJYJgNkth8o4mQSTACwD3dn0En3tkV1EGEp8m00MvlVvUA5"
 >
 </stripe-buy-button>
 
