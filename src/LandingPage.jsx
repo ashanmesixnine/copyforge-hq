@@ -29,8 +29,7 @@ export default function LandingPage() {
           <li>✅ SEO-friendly title, bullets, CTA</li>
           <li>✅ Delivered in 24–48 hours</li>
         </ul>  
-
-      <script async
+<script async
   src="https://js.stripe.com/v3/buy-button.js">
 </script>
 
